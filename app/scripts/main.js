@@ -4,7 +4,7 @@
 
   const FRAME_RATE = 60;
   const isPhone = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-  const PARTICLE_NUM = isPhone ? window.innerWidth * 15 : 5000;
+  const PARTICLE_NUM = isPhone ? window.innerWidth * 8 : 5000;
   const RADIUS = Math.PI * 2;
   const CANVASWIDTH =  parseInt(window.innerWidth * 0.9);
   const CANVASHEIGHT = parseInt(window.innerHeight / 7);

@@ -238,25 +238,25 @@
   }
 
   // setTimeout(() => {
-    init()
+  //   init()
   // }, 4000);
   // mp3.play()
 
-  // let btn = document.querySelector('.comfirm-btn');
-  // let input4Name = document.querySelector('#input4Name');
-  // let comfirmWrapper = document.querySelector('.comfirm-wrapper');
-  // let comfirmTitle = document.querySelector('.comfirm-title');
-  // let msgInfo = document.querySelector('.msg-info');
-  // btn.addEventListener('click',function () {
-  //   let inputVal = input4Name.value;
-  //   if (inputVal.indexOf('吴宝宝') > -1){
-  //     init();
-  //     comfirmWrapper.style.display = 'none';
-  //     msgInfo.style.display = 'block';
-  //     setTimeout(()=>{msgInfo.style.display = 'none'},1000);
-  //   }else {
-  //     comfirmTitle.innerText = '你不是我的宝宝';
-  //   }
-  // });
+  let btn = document.querySelector('.comfirm-btn');
+  let input4Name = document.querySelector('#input4Name');
+  let comfirmWrapper = document.querySelector('.comfirm-wrapper');
+  let comfirmTitle = document.querySelector('.comfirm-title');
+  let msgInfo = document.querySelector('.msg-info');
+  btn.addEventListener('click',function () {
+    let inputVal = input4Name.value;
+    if (inputVal.indexOf('吴宝宝') > -1){
+      init();
+      comfirmWrapper.style.display = 'none';
+      msgInfo.style.display = 'block';
+      setTimeout(()=>{msgInfo.style.display = 'none'},1000);
+    }else {
+      comfirmTitle.innerText = '你不是我的宝宝';
+    }
+  });
 
 })(window)

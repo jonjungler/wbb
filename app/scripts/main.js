@@ -4,7 +4,7 @@
 
   const FRAME_RATE = 60;
   const isPhone = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-  const PARTICLE_NUM = isPhone ? window.innerWidth * 15 : 5000;
+  const PARTICLE_NUM = isPhone ? window.innerWidth * 8 : 5000;
   const RADIUS = Math.PI * 2;
   const CANVASWIDTH =  parseInt(window.innerWidth * 0.9);
   const CANVASHEIGHT = parseInt(window.innerHeight / 7);
@@ -30,7 +30,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = parseInt(CANVASWIDTH / 8);
+    textSize = parseInt(CANVASWIDTH / 12);
 
   function draw () {
     drawText(ctx);
@@ -238,25 +238,25 @@
   }
 
   // setTimeout(() => {
-  //   init()
+    init()
   // }, 4000);
   // mp3.play()
 
-  let btn = document.querySelector('.comfirm-btn');
-  let input4Name = document.querySelector('#input4Name');
-  let comfirmWrapper = document.querySelector('.comfirm-wrapper');
-  let comfirmTitle = document.querySelector('.comfirm-title');
-  let msgInfo = document.querySelector('.msg-info');
-  btn.addEventListener('click',function () {
-    let inputVal = input4Name.value;
-    if (inputVal.indexOf('吴宝宝') > -1){
-      init();
-      comfirmWrapper.style.display = 'none';
-      msgInfo.style.display = 'block';
-      setTimeout(()=>{msgInfo.style.display = 'none'},1000);
-    }else {
-      comfirmTitle.innerText = '你不是我的宝宝';
-    }
-  });
+  // let btn = document.querySelector('.comfirm-btn');
+  // let input4Name = document.querySelector('#input4Name');
+  // let comfirmWrapper = document.querySelector('.comfirm-wrapper');
+  // let comfirmTitle = document.querySelector('.comfirm-title');
+  // let msgInfo = document.querySelector('.msg-info');
+  // btn.addEventListener('click',function () {
+  //   let inputVal = input4Name.value;
+  //   if (inputVal.indexOf('吴宝宝') > -1){
+  //     init();
+  //     comfirmWrapper.style.display = 'none';
+  //     msgInfo.style.display = 'block';
+  //     setTimeout(()=>{msgInfo.style.display = 'none'},1000);
+  //   }else {
+  //     comfirmTitle.innerText = '你不是我的宝宝';
+  //   }
+  // });
 
 })(window)

@@ -106,49 +106,90 @@ a:hover {
     }
 }
 
-#canvas{
+#canvas {
     margin: 200px auto;
 }
 
-.comfirm-wrapper{
-  position: fixed;
-  left: 50%;
-  top: 30%;
-  background: #0000004f;
-  border-radius: 10px;
-  padding: 10px;
-  transform: translateX(-50%);
-  line-height: 2;
-  box-shadow: 1px 1px 10px white;
-  color: white;
-  text-align: center;
+.comfirm-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    background: #0000004f;
+    border-radius: 10px;
+    padding: 10px;
+    transform: translateX(-50%);
+    line-height: 2;
+    box-shadow: 1px 1px 10px white;
+    color: white;
+    text-align: center;
     z-index: 999;
 }
-#input4Name{
-  margin-bottom: 15px;
-}
-.comfirm-btn{
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-top: 5px;
-  background: #2dc550;
-}
-.comfirm-btn:hover,.comfirm-btn:focus{
-  opacity: 0.6;
+
+#input4Name {
+    margin-bottom: 15px;
 }
 
-.msg-info{
-  position: fixed;
-  left: 50%;
-  top: 30%;
-  background: rgba(0,0,0,0.6);
-  /* opacity: 0.8; */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px white;
-  transition: all 500ms;
-  display: none;
-  transform: translateX(-50%);
+.comfirm-btn {
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+    background: #2dc550;
+}
+
+.comfirm-btn:hover, .comfirm-btn:focus {
+    opacity: 0.6;
+}
+
+.msg-info {
+    position: fixed;
+    left: 50%;
+    top: 30%;
+    background: rgba(0, 0, 0, 0.6);
+    /* opacity: 0.8; */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px white;
+    transition: all 500ms;
+    display: none;
+    transform: translate3d(0, -50%, 0);
+    z-index: 999;
+}
+
+.letter-balls {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s ease;
+}
+
+.letter-balls span {
+    color: red;
+    font-size: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s ease-out;
+    display: none;
+}
+.icon-letters{
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    color: red;
+    font-size: 20px;
+    z-index: 999;
+    animation: headerIcon 500ms ease-out 0s infinite alternate;
+    display: none;
+}
+@keyframes headerIcon {
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(2,2);
+    }
 }

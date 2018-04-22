@@ -4,7 +4,7 @@
 
   const FRAME_RATE = 60;
   const isPhone = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-  const PARTICLE_NUM = isPhone ? window.innerWidth * 10 : 5000;
+  const PARTICLE_NUM = isPhone ? window.innerWidth * 6 : 5000;
   const RADIUS = Math.PI * 2;
   const CANVASWIDTH =  parseInt(window.innerWidth * 0.9);
   const CANVASHEIGHT = parseInt(window.innerHeight / 7);
@@ -61,8 +61,8 @@
   function particleText (imgData) {
     // 点坐标获取
     var pxls = []
-    for (var w = CANVASWIDTH; w > 0; w -= (isPhone ? 1 : 3)) {
-      for (var h = 0; h < CANVASHEIGHT; h += (isPhone ? 2 : 3)) {
+    for (var w = CANVASWIDTH; w > 0; w -= (isPhone ? 2 : 2)) {
+      for (var h = 0; h < CANVASHEIGHT; h += (isPhone ? 1 : 3)) {
         var index = (w + h * (CANVASWIDTH)) * 4
         if (imgData.data[index] > 1) {
           pxls.push([w, h])
@@ -247,7 +247,7 @@
   let comfirmWrapper = document.querySelector('.comfirm-wrapper');
   let comfirmTitle = document.querySelector('.comfirm-title');
   let msgInfo = document.querySelector('.msg-info');
-  btn.addEventListener('click',function () {
+  btn.onclick =() =>{
     let inputVal = input4Name.value;
     if (inputVal.indexOf('吴宝宝') > -1){
       init();
@@ -257,6 +257,6 @@
     }else {
       comfirmTitle.innerText = '你不是我的宝宝';
     }
-  });
+  };
 
 })(window)

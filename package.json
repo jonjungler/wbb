@@ -1,0 +1,23 @@
+{
+  "name": "wbb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "proxyMiddleWare.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonjungler/wbbPage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonjungler/wbbPage/issues"
+  },
+  "homepage": "https://github.com/jonjungler/wbbPage#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.18.0"
+  }
+}

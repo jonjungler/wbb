@@ -5,7 +5,7 @@
   const FRAME_RATE = 60;
   const isPhone = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
   const PARTICLE_NUM = isPhone ? window.innerWidth * 6 : 5000;
-  const RADIUS = Math.PI * 2;
+  const RADIUS = Math.PI * 3;
   const CANVASWIDTH =  parseInt(window.innerWidth * 0.9);
   const CANVASHEIGHT = parseInt(window.innerHeight / 7);
   const CANVASID = 'canvas';
@@ -203,8 +203,8 @@
       this.inText = false
       // 透明度相关
       this.opacity = 0;
-      this.fadeInRate = 0.4;
-      this.fadeOutRate = 0.4;
+      this.fadeInRate = isPhone ? 0.6 : 0.4;
+      this.fadeOutRate = isPhone ? 0.6 : 0.4;
       this.opacityTresh = 0.98;
       this.fadingOut = true;
       this.fadingIn = true;

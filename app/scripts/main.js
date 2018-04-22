@@ -4,7 +4,7 @@
 
   const FRAME_RATE = 60;
   const isPhone = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
-  const PARTICLE_NUM = isPhone ? window.innerWidth * 8 : 5000;
+  const PARTICLE_NUM = isPhone ? window.innerWidth * 10 : 5000;
   const RADIUS = Math.PI * 2;
   const CANVASWIDTH =  parseInt(window.innerWidth * 0.9);
   const CANVASHEIGHT = parseInt(window.innerHeight / 7);
@@ -30,7 +30,7 @@
     quiver = true,
     text = texts[0],
     textIndex = 0,
-    textSize = parseInt(CANVASWIDTH / 8);
+    textSize = isPhone ?  parseInt(CANVASWIDTH / 8) : 70;
 
   function draw () {
     drawText(ctx);
@@ -62,7 +62,7 @@
     // 点坐标获取
     var pxls = []
     for (var w = CANVASWIDTH; w > 0; w -= (isPhone ? 1 : 3)) {
-      for (var h = 0; h < CANVASHEIGHT; h += (isPhone ? 1 : 3)) {
+      for (var h = 0; h < CANVASHEIGHT; h += (isPhone ? 2 : 3)) {
         var index = (w + h * (CANVASWIDTH)) * 4
         if (imgData.data[index] > 1) {
           pxls.push([w, h])

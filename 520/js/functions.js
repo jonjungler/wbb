@@ -23,8 +23,8 @@ $(function () {
     }, Garden.options.growSpeed);
 
     var together = new Date();
-    together.setFullYear(2018, 2, 17);
-    together.setHours(20);
+    together.setFullYear(2018, 1, 17);
+    together.setHours(19);
     together.setMinutes(35);
     together.setSeconds(0);
     together.setMilliseconds(0);

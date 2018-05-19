@@ -100,7 +100,7 @@ function startHeartAnimation() {
 	$.fn.typewriter = function() {
 		this.each(function() {
 			var $ele = $(this), str = $ele.html(), progress = 0;
-			$ele.html('');
+			// $ele.html('');
 			var timer = setInterval(function() {
 				var current = str.substr(progress, 1);
 				if (current == '<') {
@@ -108,7 +108,10 @@ function startHeartAnimation() {
 				} else {
 					progress++;
 				}
-				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+				$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : '&nbsp;'));
+				if ($(window.document).height() > clientHeight){
+				    window.scrollTo(0,$(window.document).height() - clientHeight);
+                }
 				if (progress >= str.length) {
 					clearInterval(timer);
 				}
@@ -138,6 +141,7 @@ function timeElapse(date){
 	}
 	var result = "<span class=\"digit\">" + days + "</span> 天 <span class=\"digit\">" + hours + "</span> 时 <span class=\"digit\">" + minutes + "</span> 分 <span class=\"digit\">" + seconds + "</span> 秒";
 	$("#elapseClock").html(result);
+
 }
 
 function showMessages() {
